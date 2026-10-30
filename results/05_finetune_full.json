@@ -1,0 +1,21 @@
+{
+  "module": "05_finetune",
+  "impl": "solution",
+  "device": "Apple Metal (MPS)",
+  "model": "distilbert/distilbert-base-uncased",
+  "lora": false,
+  "train_size": 2000,
+  "test_size": 1000,
+  "epochs": 1,
+  "batch": 16,
+  "max_length": 256,
+  "lr": 5e-05,
+  "params_total": 66955010,
+  "params_trainable": 66955010,
+  "accuracy_before": 0.533,
+  "accuracy_after": 0.863,
+  "seconds": 120.4,
+  "first_loss": 0.681916356086731,
+  "last_loss": 0.2907573589682579,
+  "saved_to": "results/finetuned-distilbert-imdb-full"
+}

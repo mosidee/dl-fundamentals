@@ -1,0 +1,30 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "device": "Apple Metal (MPS)",
+  "dtype": "torch.float16",
+  "new_tokens_per_sequence": 64,
+  "impl": "solution",
+  "rows": [
+    {
+      "batch": 1,
+      "new_tokens": 64,
+      "seconds": 0.8630864159786142,
+      "tokens_per_second": 74.15248208655134,
+      "mps_allocated_mb": 960
+    },
+    {
+      "batch": 4,
+      "new_tokens": 256,
+      "seconds": 2.5819707500049844,
+      "tokens_per_second": 99.14907053052626,
+      "mps_allocated_mb": 960
+    },
+    {
+      "batch": 8,
+      "new_tokens": 512,
+      "seconds": 2.1926723750075325,
+      "tokens_per_second": 233.5050169080737,
+      "mps_allocated_mb": 960
+    }
+  ]
+}

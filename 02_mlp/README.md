@@ -25,7 +25,7 @@ Training: take a mini-batch, forward, loss, `backward()`, update, repeat. First 
 ../.venv/bin/python train_mnist.py --impl exercise     # after your tests pass
 ```
 
-Downloads MNIST through `datasets`, trains 784 -> 256 -> 10 for two epochs on MPS, prints test accuracy, writes `results/02_mnist.json`. Expect about 97 to 98%. Then try `--lr 0.01` and `--lr 1.0` and watch what happens to the loss curve.
+Downloads MNIST through `datasets`, trains 784 -> 256 -> 10 for two epochs on MPS, prints test accuracy, writes `results/02_mnist.json`. Expect about 96% after two epochs (the reference run got 96.1%); a third epoch or a lower learning rate gets a little more. Then try `--lr 0.01` and `--lr 1.0` and watch what happens to the loss curve.
 
 ## Then answer in `learning-log.md`
 

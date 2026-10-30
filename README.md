@@ -46,7 +46,25 @@ cd 01_tensors_autograd && IMPL=solution ../.venv/bin/python -m pytest -q  # test
 
 ## Results
 
-Filled in from actual runs; see `results/`. Numbers are for this machine (Apple M2, 24 GB, MPS) and are not claims about any other hardware.
+Reference runs of the solution code on this machine (Apple M2, 24 GB, MPS, torch 2.15, 2026-10-30). The JSON files in `results/` are written by the scripts, not by hand. Re-run with `--impl exercise` once your own code passes the tests; your numbers replace these.
+
+| Module | Run | Result |
+|---|---|---|
+| 02 MLP | MNIST, 784-256-10, Adam 1e-3, 2 epochs, batch 128 | test accuracy 96.1% in 3 s |
+| 03 Transformer | character-level GPT, 826,433 parameters, 1500 steps, block 128 | validation loss 4.17 to 1.93 in 98 s; sample in `results/03_charlm.json` |
+| 04 Tokenizers | Qwen2.5 tokenizer, two sentence pairs | English vs Thai tokens: 8 vs 13; 6 vs 16 |
+| 05 Fine-tune, full | DistilBERT on IMDB, 2000 train / 1000 test, 1 epoch | accuracy 53.3% before, 86.3% after; 66,955,010 trainable parameters; 120 s |
+| 05 Fine-tune, LoRA r=8 | same data | accuracy 53.3% before, 86.7% after; 739,586 trainable parameters (1.1%); 105 s |
+
+Generation throughput, `Qwen/Qwen2.5-0.5B-Instruct`, float16 on MPS, 64 new tokens per sequence, greedy:
+
+| Batch size | Tokens per second | MPS memory (MB) |
+|---|---|---|
+| 1 | 74 | 960 |
+| 4 | 99 | 960 |
+| 8 | 234 | 960 |
+
+Batching eight prompts gives about three times the throughput of one, from the same weights read once per step. That is the first fact of inference optimisation, and you can see it on a laptop.
 
 ## Honesty note
 

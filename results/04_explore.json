@@ -1,0 +1,44 @@
+{
+  "device": "Apple Metal (MPS)",
+  "tokens": [
+    {
+      "en": "The weather in Bangkok is hot today.",
+      "en_tokens": 8,
+      "th": "วันนี้อากาศที่กรุงเทพร้อนมาก",
+      "th_tokens": 13
+    },
+    {
+      "en": "I am learning deep learning.",
+      "en_tokens": 6,
+      "th": "ฉันกำลังเรียนการเรียนรู้เชิงลึก",
+      "th_tokens": 16
+    }
+  ],
+  "sentiment": [
+    {
+      "text": "This library is a joy to use.",
+      "label": "POSITIVE",
+      "score": 0.9998718500137329
+    },
+    {
+      "text": "The documentation is confusing and the install broke twice.",
+      "label": "NEGATIVE",
+      "score": 0.9994431138038635
+    }
+  ],
+  "chat": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "question": "In two sentences, what does a tokenizer do?",
+    "answer": "A tokenizer is an essential component in natural language processing (NLP) that converts text into its constituent words and characters, enabling the analysis of language patterns and structures."
+  },
+  "datasets": {
+    "name": "stanfordnlp/imdb",
+    "rows": 200,
+    "columns_after_map": [
+      "text",
+      "label",
+      "input_ids",
+      "attention_mask"
+    ]
+  }
+}
