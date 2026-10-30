@@ -1,0 +1,13 @@
+torch>=2.15
+numpy
+transformers>=5
+datasets
+tokenizers
+accelerate
+peft
+safetensors
+pytest
+matplotlib
+pillow
+fastapi
+uvicorn
