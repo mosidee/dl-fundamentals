@@ -18,11 +18,13 @@ def _toy():
 
 @pytest.fixture()
 def tiny():
-    from transformers import AutoModelForSequenceClassification, AutoTokenizer
+    # BertTokenizerFast explicitly: this old test model ships only vocab.txt, which AutoTokenizer
+    # cannot convert under transformers v5, and a config.json without model_type, so the Bert* classes are named directly. Real models (distilbert, Qwen) ship tokenizer.json and load via Auto*.
+    from transformers import BertForSequenceClassification, BertTokenizerFast
 
     torch.manual_seed(0)
-    tok = AutoTokenizer.from_pretrained(TINY)
-    model = AutoModelForSequenceClassification.from_pretrained(TINY, num_labels=2)
+    tok = BertTokenizerFast.from_pretrained(TINY)
+    model = BertForSequenceClassification.from_pretrained(TINY, num_labels=2)
     return tok, model
 
 

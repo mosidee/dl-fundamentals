@@ -1,0 +1,23 @@
+{
+  "module": "02_mlp",
+  "impl": "solution",
+  "device": "Apple Metal (MPS)",
+  "epochs": 2,
+  "lr": 0.001,
+  "batch": 128,
+  "hidden": 256,
+  "seconds": 3.2,
+  "final_test_accuracy": 0.9610999822616577,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.36175867648919424,
+      "test_accuracy": 0.9438999891281128
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.1594659682750702,
+      "test_accuracy": 0.9610999822616577
+    }
+  ]
+}

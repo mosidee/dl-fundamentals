@@ -11,3 +11,5 @@ matplotlib
 pillow
 fastapi
 uvicorn
+sentencepiece
+tiktoken

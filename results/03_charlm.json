@@ -1,0 +1,105 @@
+{
+  "module": "03_attention_transformer",
+  "impl": "solution",
+  "device": "Apple Metal (MPS)",
+  "text": "tinyshakespeare",
+  "vocab": 65,
+  "parameters": 826433,
+  "steps": 1500,
+  "batch": 64,
+  "block": 128,
+  "seconds": 98.5,
+  "first": {
+    "step": 1,
+    "train_loss": 4.2861,
+    "val_loss": 4.1717
+  },
+  "last": {
+    "step": 1500,
+    "train_loss": 1.7847,
+    "val_loss": 1.9298
+  },
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 4.2861,
+      "val_loss": 4.1717
+    },
+    {
+      "step": 100,
+      "train_loss": 2.6523,
+      "val_loss": 2.6354
+    },
+    {
+      "step": 200,
+      "train_loss": 2.5171,
+      "val_loss": 2.5033
+    },
+    {
+      "step": 300,
+      "train_loss": 2.3943,
+      "val_loss": 2.4362
+    },
+    {
+      "step": 400,
+      "train_loss": 2.3639,
+      "val_loss": 2.3603
+    },
+    {
+      "step": 500,
+      "train_loss": 2.3118,
+      "val_loss": 2.3101
+    },
+    {
+      "step": 600,
+      "train_loss": 2.2098,
+      "val_loss": 2.2395
+    },
+    {
+      "step": 700,
+      "train_loss": 2.1237,
+      "val_loss": 2.1795
+    },
+    {
+      "step": 800,
+      "train_loss": 2.1003,
+      "val_loss": 2.1245
+    },
+    {
+      "step": 900,
+      "train_loss": 2.0336,
+      "val_loss": 2.0927
+    },
+    {
+      "step": 1000,
+      "train_loss": 2.0069,
+      "val_loss": 2.0472
+    },
+    {
+      "step": 1100,
+      "train_loss": 1.9208,
+      "val_loss": 2.0376
+    },
+    {
+      "step": 1200,
+      "train_loss": 1.8603,
+      "val_loss": 1.99
+    },
+    {
+      "step": 1300,
+      "train_loss": 1.891,
+      "val_loss": 1.9493
+    },
+    {
+      "step": 1400,
+      "train_loss": 1.843,
+      "val_loss": 1.95
+    },
+    {
+      "step": 1500,
+      "train_loss": 1.7847,
+      "val_loss": 1.9298
+    }
+  ],
+  "sample": "For from to their to to no cold,\nAnd stent the go out is torn exentle, not for it\nTo thing the fair come not ther the troous hough\nTho sterver your thou the hear, soffelch hone?\n\nDUKE GAREY:\nRome for lords the the prose so condlood to kuch of that\nHame th wo hese be the placime\nYour morners, from in\nWhat, may bralt good, the is than endst\nShark the marss, brier then you\nTo hath the daltious on I ri"
+}
